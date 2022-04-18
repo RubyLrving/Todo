@@ -43,12 +43,10 @@ namespace Todo.Controllers
             //エラー情報を返す
             if (list == null)
             {
-                return new ResponseJson(false, "DB接続エラー");
+                return new ResponseJson(false, "DB接続エラー", null);
             }
             //検索結果を返す
-            ResponseJson res = new ResponseJson(true, "");
-            res.list = list.AsEnumerable<TodoItem>();
-            return res;
+            return new ResponseJson(true, "", list.AsEnumerable<TodoItem>()); ;
         }
 
         /// <summary>
@@ -70,10 +68,11 @@ namespace Todo.Controllers
         [DataContract]
         public class ResponseJson
         {
-            public ResponseJson(bool ok_, string errorMsg_)
+            public ResponseJson(bool ok_, string errorMsg_, IEnumerable<TodoItem> list_)
             {
                 ok = ok_;
                 errorMsg = errorMsg_;
+                list = list_;
             }
             // 通信結果, true: 成功, false: 失敗
             [DataMember]
