@@ -1,0 +1,56 @@
+﻿/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.container {
+    padding: 16px;
+}
+
+.button {
+    transition: .3s; /* 変化時間 0.3秒 */
+    padding: 12px 24px; /* 内側の余白設定 */
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 12px; /* 要素の角を丸くする */
+    background-color: #2ecadf; /* 背景色指定 */
+    text-decoration: none; /* aタグの下線を非表示に */
+    color: #fff; /* 文字色 */
+    font-size: 1.2rem; /* フォントサイズ */
+}
+
+.button:hover {
+    transition: .3s; /* 変化時間 0.3秒 */
+    background-color: #00a9de; /* 背景色 */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(46, 202, 223, 0.05);
+}
+
+
+.table-striped tbody tr.expired {
+    background-color: rgba(248, 220, 224, 0.5);
+}
+
+.red {
+    color: rgba(255, 100, 100, 1);
+}
+
+.someText {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
